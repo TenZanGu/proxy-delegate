@@ -1,9 +1,10 @@
 pragma solidity ^0.5.0;
 
 contract ProxyDelegate {
+    uint public version;
     address public owner;
     address public delegate;  // contract to delegate calls to
-
+    
     event LogResult(bytes result);
 
     constructor(address delegateAddress) public {
